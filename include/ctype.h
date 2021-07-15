@@ -1,5 +1,5 @@
-#ifndef CTYPE_H
-# define CTYPE_H 1
+#ifndef _CTYPE_H
+# define _CTYPE_H 1
 
 int isalnum(int);
 int isalpha(int);
@@ -15,4 +15,4 @@ int isxdigit(int);
 int tolower(int);
 int toupper(int);
 
-#endif /* !CTYPE_H */
+#endif /* !_CTYPE_H */
