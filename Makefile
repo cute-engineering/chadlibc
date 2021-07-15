@@ -3,14 +3,17 @@ LD		= ld
 AR		= ar
 RM		= rm -f
 
-CFLAGS	+= -Wall -Werror -Wextra -fpic -nostdlib -nostdinc
+CFLAGS	+= -Wall -Werror -Wextra -fpic -fno-builtin -nostdlib \
+			 -nostdinc -Iinclude
 ifneq ($(CC), tcc)
 CFLAGS	+= -ansi -pedantic
 endif
 LDFLAGS	+= -nostdlib -shared
 ARFLAGS	= rcs
 
-SRCS	= ctype.c
+STRING_SRC	= memcpy.c strcpy.c strncpy.c
+SRCS	= ctype.c \
+			$(addprefix string/, $(STRING_SRC))
 OBJS	= $(addprefix src/, $(SRCS:.c=.o))
 
 TARGET	= libc
