@@ -17,4 +17,6 @@ jobs:
         sudo apt-get install clang tcc
 
     - name: Build with ${{ matrix.cc }}
-      run: CC=${{ matrix.cc }} make re
+      run: |
+        ./configure
+        CC=${{ matrix.cc }} make re

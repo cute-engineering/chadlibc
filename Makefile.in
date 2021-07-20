@@ -11,12 +11,16 @@ endif
 LDFLAGS	+= -nostdlib -shared
 ARFLAGS	= rcs
 
+SYSDEPS_PATH	= %(SYSDEPS_SRC)
+
 STRING_SRC	= memcpy.c strcpy.c strncpy.c
 SRCS	= ctype.c \
 			$(addprefix string/, $(STRING_SRC))
 OBJS	= $(addprefix src/, $(SRCS:.c=.o))
 
 TARGET	= libc
+
+include sysdeps/%(SYSDEPS_SRC)/build.mk
 
 all: $(TARGET).a $(TARGET).so
 
