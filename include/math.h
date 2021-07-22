@@ -1,5 +1,5 @@
 #ifndef _MATH_H
-# define _MATH_H 1
+#define _MATH_H 1
 
 /* Power functions */
 double sqrt(double);
