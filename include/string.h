@@ -4,6 +4,7 @@
 #include <stddef.h>
 
 void *memcpy(void *, const void *, size_t);
+void *memmove(void *, const void *, size_t);
 char *strcpy(char *, const char *);
 char *strncpy(char *, const char *, size_t);
 
