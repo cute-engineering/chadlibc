@@ -3,7 +3,8 @@
 size_t
 strlen(const char *s)
 {
-  size_t i = 0;
-  while (s[i++] != 0);
-  return (i - 1);
+	size_t i = 0;
+	while (s[i++] != 0)
+		;
+	return (i - 1);
 }
