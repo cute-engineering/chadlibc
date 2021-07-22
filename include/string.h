@@ -8,4 +8,6 @@ void *memmove(void *, const void *, size_t);
 char *strcpy(char *, const char *);
 char *strncpy(char *, const char *, size_t);
 
+size_t strlen(const char *);
+
 #endif /* !_STRING_H */
