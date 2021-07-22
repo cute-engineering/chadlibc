@@ -19,5 +19,5 @@ memmove(void *s1, const void *s2, size_t n)
   {
     memcpy(s1, s2, n);
   }
-  return s1;
+  return (s1);
 }
