@@ -13,5 +13,6 @@ int strncmp(const char *, const char *, size_t);
 int strcmp(const char *, const char *);
 
 size_t strlen(const char *);
+void *memset(void *, int, size_t);
 
 #endif /* !_STRING_H */
