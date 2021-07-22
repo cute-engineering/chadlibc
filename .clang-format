@@ -13,3 +13,5 @@ SpacesBeforeTrailingComments: 4
 TabWidth: 4
 UseTab: Always
 SortIncludes: true
+IndentPPDirectives: AfterHash
+PPIndentWidth: 1
