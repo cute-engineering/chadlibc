@@ -1,0 +1,25 @@
+#ifndef _STDLIB_H
+# define _STDLIB_H 1
+
+# define RAND_MAX 32767
+
+typedef struct
+{
+	int quot;
+	int rem;
+} div_t;
+
+typedef struct
+{
+	long int quot;
+	long int rem;
+} ldiv_t;
+
+int abs(int);
+div_t div(int, int);
+long int labs(long int);
+ldiv_t ldiv(long int, long int);
+int rand(void);
+int srand(unsigned int);
+
+#endif /* !_STDLIB_H */
