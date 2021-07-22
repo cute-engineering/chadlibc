@@ -9,9 +9,9 @@ memcpy(void *s1, const void *s2, size_t n)
 
 	cs1 = (char *)s1;
 	cs2 = (const char *)s2;
-	for (; n > 0; n++)
+	for (; n > 0; n--)
 	{
-		*cs1 = *cs2;
+		*cs1++ = *cs2++;
 	}
 	return (s1);
 }
