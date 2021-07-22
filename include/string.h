@@ -1,9 +1,7 @@
 #ifndef _STRING_H
 # define _STRING_H 1
 
-# define NULL ((void *)0)
-
-typedef unsigned int size_t;
+#include <stddef.h>
 
 void *memcpy(void *, const void *, size_t);
 char *strcpy(char *, const char *);
