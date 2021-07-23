@@ -27,7 +27,7 @@ isdigit(int c)
 int
 isgraph(int c)
 {
-	return (c); /* TODO */
+	return (c >= '!' && c <= '~');
 }
 
 int
@@ -39,7 +39,7 @@ islower(int c)
 int
 isprint(int c)
 {
-	return (c); /* TODO */
+	return (isspace(c) || isgraph(c));
 }
 
 int
