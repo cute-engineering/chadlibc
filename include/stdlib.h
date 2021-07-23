@@ -20,6 +20,6 @@ div_t div(int, int);
 long int labs(long int);
 ldiv_t ldiv(long int, long int);
 int rand(void);
-int srand(unsigned int);
+void srand(unsigned int);
 
 #endif /* !_STDLIB_H */

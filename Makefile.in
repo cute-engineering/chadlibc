@@ -13,28 +13,33 @@ ARFLAGS	= rcs
 
 SYSDEPS_PATH	= %(SYSDEPS_SRC)
 
-STRING_SRC	= memcpy.c strcpy.c strncpy.c
-SRCS	= ctype.c \
-			$(addprefix string/, $(STRING_SRC))
+include src/build.mk
+
 OBJS	= $(addprefix src/, $(SRCS:.c=.o))
 
-TARGET	= libc
+LIB_SHARED	= libc.so
+LIB_STATIC	= libc.a
+TARGET		= $(LIB_STATIC)
+ifeq (%(SYSDEPS_SHARED), 1)
+TARGET		+= $(LIB_SHARED)
+endif
+
 
 include sysdeps/%(SYSDEPS_SRC)/build.mk
 
-all: $(TARGET).a $(TARGET).so
+all: $(TARGET)
 
-$(TARGET).a: $(OBJS)
+$(LIB_STATIC): $(OBJS)
 	$(AR) $(ARFLAGS) $@ $^
 
-$(TARGET).so: $(OBJS)
+$(LIB_SHARED): $(OBJS)
 	$(LD) $(LDFLAGS) -o $@ $^
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-	$(RM) $(OBJS) $(TARGET).a $(TARGET.o)
+	$(RM) $(OBJS) $(TARGET)
 
 re: clean all
 

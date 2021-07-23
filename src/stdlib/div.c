@@ -1,7 +1,7 @@
 #include <stdlib.h>
 
 div_t
-div(int numer, int denom)
+div(int number, int denom)
 {
 	div_t res;
 

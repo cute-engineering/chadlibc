@@ -59,7 +59,7 @@ sub opt_handler {
 }
 
 GetOptions(
-    'target' => \&opt_handler,
+    'target=s' => \&opt_handler,
     'man_dir=s' => \&opt_handler,
     'lib_dir=s' => \&opt_handler,
     'sysroot=s' => \&opt_handler,
