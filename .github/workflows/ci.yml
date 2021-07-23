@@ -20,3 +20,15 @@ jobs:
       run: |
         ./configure
         CC=${{ matrix.cc }} make re
+
+  testsuite:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install build dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install build-essential
+    - name: Run testsuite
+      run: |
+        make test

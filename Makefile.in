@@ -44,3 +44,5 @@ clean:
 re: clean all
 
 .PHONY: all clean re
+
+include test/build.mk
