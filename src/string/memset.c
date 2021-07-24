@@ -1,13 +1,14 @@
 #include <string.h>
 
-void
+void *
 memset(void *s, int c, size_t n)
 {
-	char *cs = (char *)s;
-	unsigned char cc = (unsigned char)c;
-	size_t i = 0;
-	for (; i < n; i++)
+	unsigned char *cs;
+
+	cs = (unsigned char *)s;
+	while (n--)
 	{
-		cs[i] = cc;
+		*cs++ = (unsigned char)c;
 	}
+	return (s);
 }
