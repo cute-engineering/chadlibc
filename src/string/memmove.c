@@ -8,16 +8,16 @@ memmove(void *s1, const void *s2, size_t n)
 
 	cs1 = (char *)s1;
 	cs2 = (const char *)s2;
-	if (cs2 + n >= cs1)
+	if (cs1 == cs2)
+	{
+		return (s1);
+	}
+	else 
 	{
 		for (; n > 0; --n)
 		{
-			cs1[n] = cs2[n];
+			*cs1++ = *cs2++;
 		}
-	}
-	else
-	{
-		memcpy(s1, s2, n);
 	}
 	return (s1);
 }
