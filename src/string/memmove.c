@@ -12,16 +12,12 @@ memmove(void *s1, const void *s2, size_t n)
 	{
 		return (s1);
 	}
-	else if (cs1 > cs2)
+	else 
 	{
 		for (; n > 0; --n)
 		{
 			*cs1++ = *cs2++;
 		}
-	}
-	else
-	{
-		memcpy(s1, s2, n);
 	}
 	return (s1);
 }
