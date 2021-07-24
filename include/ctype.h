@@ -1,5 +1,5 @@
 #ifndef _CTYPE_H
-#define _CTYPE_H 1
+# define _CTYPE_H 1
 
 int isalnum(int);
 int isalpha(int);
