@@ -3,5 +3,14 @@
 int
 strncmp(const char *s1, const char *s2, size_t n)
 {
-	return (memcmp(s1, s2, n));
+	while (n--)
+	{
+		if (*s1 != *s2)
+		{
+			return (*s1 - *s2);
+		}
+		s1++;
+		s2++;
+	}
+	return (0);
 }

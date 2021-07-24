@@ -6,12 +6,12 @@ strcmp(const char *s1, const char *s2)
  	size_t i = 0;
  	for (; s1[i] != 0 && s2[i] != 0; i++)
  	{
-		char first = s1[i];
-    	char second = s2[i];
-    	if (first != second)
+    	if (*s1 != *s2)
     	{
-    		return (first - second);
+    		return (*s1 - *s2);
     	}
+		s1++;
+		s2++;
   	}
-  	return 0;
+  	return (0);
 }
