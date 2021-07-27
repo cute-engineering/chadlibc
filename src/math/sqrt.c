@@ -1,12 +1,10 @@
 #include <errno.h>
-#include <math.h>
-#include <stddef.h>
 
 double
 sqrt(double x)
 {
-	double z = 1;
-	size_t i = 0;
+	double z;
+	int i;
 
 	if (x < 0)
 	{
@@ -14,7 +12,8 @@ sqrt(double x)
 		return 0;
 	}
 
-	for (; i < 10; i++)
+	z = 1;
+	for (i = 0; i < 10; i++)
 	{
 		z -= (z * z - x) / (2 * z);
 	}
