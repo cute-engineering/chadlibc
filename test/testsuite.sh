@@ -1,5 +1,7 @@
 #/bin/sh
 
+result=0
+
 for exe in test/*.exe
 do
     ./$exe
@@ -8,5 +10,8 @@ do
         echo "$exe - PASSED"
     else
         echo "$exe - FAILED"
+        result=$((result+1))
     fi
 done
+
+exit $result
