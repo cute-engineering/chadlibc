@@ -1,3 +1,10 @@
-STRING_SRC	= memcpy.c \
+STRING_SRC	= memcmp.c \
+				 memcpy.c \
+				 memmove.c \
+				 memset.c \
+				 strcat.c \
 				 strcpy.c \
-				 strncpy.c
+				 strcmp.c \
+				 strncpy.c \
+				 strncat.c \
+				 strncmp.c
