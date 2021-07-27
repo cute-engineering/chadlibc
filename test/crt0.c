@@ -6,12 +6,12 @@ _start(void)
 	main();
 
 #ifdef __x86_64__
-	asm("movl %eax,%edi;"
+	__asm__("movl %eax,%edi;"
 		"movl $60,%eax;"
 		"syscall"
 	);
 #else
-	asm("movl %eax, %ebx;"
+	__asm__("movl %eax, %ebx;"
 		"movl $1, %eax;"
 		"int $0x80"
 	);

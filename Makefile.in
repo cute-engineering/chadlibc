@@ -38,11 +38,11 @@ $(LIB_SHARED): $(OBJS)
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
+include test/build.mk
+
 clean:
-	$(RM) $(OBJS) $(TARGET)
+	$(RM) $(OBJS) $(TARGET) $(TEST_EXE)
 
 re: clean all
 
 .PHONY: all clean re
-
-include test/build.mk

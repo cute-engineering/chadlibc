@@ -4,6 +4,7 @@ STRING_SRC	= memcmp.c \
 				 memset.c \
 				 strcat.c \
 				 strcpy.c \
+				 strlen.c \
 				 strcmp.c \
 				 strncpy.c \
 				 strncat.c \
