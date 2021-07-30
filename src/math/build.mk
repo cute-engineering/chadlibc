@@ -1,1 +1,2 @@
-MATH_SRC	= sqrt.c
+MATH_SRC	= sqrt.c\
+				ceil.c
