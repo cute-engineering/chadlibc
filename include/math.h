@@ -6,8 +6,8 @@ double sqrt(double);
 double pow(double, double);
 
 /* Nearest integer, absolute value, and remainder functions */
-double floor(double);
-double ceil(double);
+int floor(double);
+int ceil(double);
 double fabs(double);
 double fmod(double, double);
 
