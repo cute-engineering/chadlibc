@@ -1,2 +1,3 @@
 MATH_SRC	= sqrt.c\
-				ceil.c
+				ceil.c\
+				floor.c
