@@ -31,4 +31,5 @@ jobs:
         sudo apt-get install build-essential
     - name: Run testsuite
       run: |
+        ./configure
         make test
