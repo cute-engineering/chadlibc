@@ -1,5 +1,5 @@
 int
 floor(double x) 
 {
-    return (int)x;
+    return ((int)x);
 }

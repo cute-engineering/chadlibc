@@ -1,5 +1,5 @@
 int
 ceil (double x)
 {
-    return (int)(x + 1);
+    return ((x == (int)x) ? x : (int) x);
 }
