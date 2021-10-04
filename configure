@@ -6,7 +6,7 @@ use Getopt::Long;
 use Pod::Usage;
 use Data::Dumper;
 
-my $VERSION = `git describe --tags --abbrev=0`;
+my $VERSION = `git describe --tags --abbrev=0 2>/dev/null`;
 chomp($VERSION);
 
 my $debug = 0;
