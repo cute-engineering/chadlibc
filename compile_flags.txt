@@ -1,0 +1,10 @@
+-Wall
+-Werror
+-Wextra
+-fpic
+-fno-builtin
+-nostdlib
+-nostdinc
+-Iinclude
+-ansi
+-pedantic
