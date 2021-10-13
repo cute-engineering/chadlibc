@@ -1,5 +1,6 @@
 CC		?= gcc
-LD		= ld
+LD		?= ld
+AS		?= as
 AR		= ar
 RM		= rm -f
 
@@ -19,11 +20,10 @@ OBJS	= $(addprefix src/, $(SRCS:.c=.o))
 
 LIB_SHARED	= libc.so
 LIB_STATIC	= libc.a
-TARGET		= $(LIB_STATIC)
+TARGET		= crt0.o $(LIB_STATIC)
 ifeq (%(SYSDEPS_SHARED), 1)
 TARGET		+= $(LIB_SHARED)
 endif
-
 
 include sysdeps/%(SYSDEPS_SRC)/build.mk
 
@@ -34,6 +34,9 @@ $(LIB_STATIC): $(OBJS)
 
 $(LIB_SHARED): $(OBJS)
 	$(LD) $(LDFLAGS) -o $@ $^
+
+crt0.o: sysdeps/$(SYSDEPS_PATH)/crt0.S
+	$(AS) -o $@ $^
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<

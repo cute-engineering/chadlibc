@@ -10,7 +10,7 @@ TEST_EXE	= $(addprefix test/, $(TEST_SRCS:.c=.exe))
 test: $(TEST_EXE)
 	@ ./test/testsuite.sh
 
-test/%.exe: test/%.c test/crt0.c $(LIB_STATIC)
+test/%.exe: test/%.c crt0.o $(LIB_STATIC)
 	$(CC) -o $@ $^ $(CFLAGS)
 
 .PHONY: test
