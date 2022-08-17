@@ -1,13 +1,15 @@
+#include <stddef.h>
+
 char *
-strrchr(char const *s, int c)
+strrchr(const char *s, int c)
 {
-    char *last = 0;
+    char *last = NULL;
 
     while (*s)
     {
         if (*s == c)
         {
-            last = (char *) s;
+            last = (char *)s;
         }
         s++;
     }
