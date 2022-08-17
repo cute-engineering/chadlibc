@@ -4,7 +4,7 @@ AS		?= as
 AR		= ar
 RM		= rm -f
 
-CFLAGS	+= -Wall -Werror -Wextra -fpic -fno-builtin -nostdlib \
+CFLAGS	+= -Wall -Werror -Wextra -fpic -fno-builtin -fno-stack-protector -nostdlib \
 			 -nostdinc -Iinclude
 ifneq ($(CC), tcc)
 CFLAGS	+= -ansi -pedantic
