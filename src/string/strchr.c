@@ -1,3 +1,5 @@
+#include <stddef.h>
+
 char *
 strchr(const char *s, int c)
 {
@@ -5,10 +7,10 @@ strchr(const char *s, int c)
     {
         if (*s == c)
         {
-            return ((char *) s);
+            return ((char *)s);
         }
         s++;
     }
 
-    return (0);
+    return (NULL);
 }
