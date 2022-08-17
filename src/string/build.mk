@@ -8,4 +8,6 @@ STRING_SRC	= memcmp.c \
 				 strcmp.c \
 				 strncpy.c \
 				 strncat.c \
-				 strncmp.c
+				 strncmp.c \
+				 strrchr.c \
+				 strchr.c \
