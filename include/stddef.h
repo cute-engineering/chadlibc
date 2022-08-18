@@ -9,5 +9,10 @@ typedef __SIZE_TYPE__ size_t;
 typedef unsigned long size_t;
 #endif
 
+#ifdef __PTRDIFF_TYPE__
+typedef __PTRDIFF_TYPE__ ptrdiff_t;
+#else
+typedef long ptrdiff_t;
+#endif
 
 #endif /* !_STDDEF_H */
