@@ -1,7 +1,7 @@
 CC		?= gcc
 LD		?= ld
-AS		?= as
-AR		= $(CC)
+AS		?= $(CC)
+AR		= ar
 RM		= rm -f
 
 CFLAGS	+= -Wall -Werror -Wextra -fpic -fno-builtin -fno-stack-protector -nostdlib \
