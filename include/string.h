@@ -15,6 +15,8 @@ int strncmp(const char *, const char *, size_t);
 int strcmp(const char *, const char *);
 char *strchr(const char *, int);
 char *strrchr(const char *, int);
+size_t strspn(const char *, const char *);
+size_t strcspn(const char *, const char *);
 
 size_t strlen(const char *);
 void *memset(void *, int, size_t);

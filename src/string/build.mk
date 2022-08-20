@@ -11,3 +11,5 @@ STRING_SRC	= memcmp.c \
 				 strncmp.c \
 				 strrchr.c \
 				 strchr.c \
+				 strspn.c \
+				 strcspn.c

@@ -6,7 +6,9 @@ TEST_SRCS	= test_ctype.c \
 				test_strncat.c \
 				test_strncmp.c \
 				test_strrchr.c \
-				test_strchr.c
+				test_strchr.c \
+				test_strcspn.c \
+				test_strspn.c
 TEST_EXE	= $(addprefix test/, $(TEST_SRCS:.c=.exe))
 
 test: $(TEST_EXE)
