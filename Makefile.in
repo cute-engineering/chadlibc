@@ -15,8 +15,9 @@ ARFLAGS	= rcs
 SYSDEPS_PATH	= %(SYSDEPS_SRC)
 
 include src/build.mk
+include sysdeps/%(SYSDEPS_SRC)/build.mk
 
-OBJS	= $(addprefix src/, $(SRCS:.c=.o))
+OBJS	= $(addprefix src/, $(SRCS:.c=.o)) $(addprefix sysdeps/$(SYSDEPS_PATH)/, $(SYSDEPS_SRCS:.c=.o))
 
 LIB_SHARED	= libc.so
 LIB_STATIC	= libc.a
@@ -24,8 +25,6 @@ TARGET		= crt0.o $(LIB_STATIC)
 ifeq (%(SYSDEPS_SHARED), 1)
 TARGET		+= $(LIB_SHARED)
 endif
-
-include sysdeps/%(SYSDEPS_SRC)/build.mk
 
 all: $(TARGET)
 
@@ -40,6 +39,9 @@ crt0.o: sysdeps/$(SYSDEPS_PATH)/crt0.S
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
+
+sysdeps/$(SYSDEPS_PATH)/%.o: sysdeps/$(SYSDEPS_PATH)/%.c
+	$(CC) $(CFLAGS) $(SYSDEPS_CFLAGS) -c -o $@ $<
 
 include test/build.mk
 
