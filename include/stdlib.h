@@ -6,6 +6,9 @@
 
 #define RAND_MAX 32767
 
+/* Defined by spec to be **at least** 32 */
+#define ATEXIT_MAX 32
+
 typedef struct
 {
 	int quot;
@@ -26,5 +29,7 @@ int rand(void);
 void srand(unsigned int);
 
 void exit(int);
+char *getenv(const char *name);
+int atexit(void (*func)(void));
 
 #endif /* !_STDLIB_H */
