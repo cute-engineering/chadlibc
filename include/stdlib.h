@@ -1,7 +1,7 @@
 #ifndef _STDLIB_H
-# define _STDLIB_H 1
+#define _STDLIB_H 1
 
-# define RAND_MAX 32767
+#define RAND_MAX 32767
 
 typedef struct
 {
@@ -21,5 +21,7 @@ long int labs(long int);
 ldiv_t ldiv(long int, long int);
 int rand(void);
 void srand(unsigned int);
+
+void exit(int);
 
 #endif /* !_STDLIB_H */
