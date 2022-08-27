@@ -1,4 +1,3 @@
-#include <stdarg.h>
 #include <sys/syscall.h>
 
 static void
