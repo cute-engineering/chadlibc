@@ -27,6 +27,6 @@ void srand(unsigned int);
 
 void exit(int);
 char *getenv(const char *name);
-void atexit(void (*func)(void));
+int atexit(void (*func)(void));
 
 #endif /* !_STDLIB_H */
