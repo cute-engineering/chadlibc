@@ -4,7 +4,7 @@ result=0
 
 for exe in test/*.exe
 do
-    ./$exe
+    TEST_ENV=some_value ./$exe
     if [ "$?" -eq "0" ]
     then
         echo "$exe - PASSED"
