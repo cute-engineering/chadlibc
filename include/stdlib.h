@@ -23,5 +23,6 @@ int rand(void);
 void srand(unsigned int);
 
 void exit(int);
+char *getenv(const char *name);
 
 #endif /* !_STDLIB_H */

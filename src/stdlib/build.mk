@@ -3,4 +3,5 @@ STDLIB_SRC	= abs.c \
 				labs.c \
 				ldiv.c \
 				rand.c \
-				exit.c
+				exit.c \
+				getenv.c
