@@ -1,6 +1,9 @@
 #ifndef _STDLIB_H
 #define _STDLIB_H 1
 
+#define EXIT_SUCCESS 0
+#define EXIT_FAILURE 1
+
 #define RAND_MAX 32767
 
 typedef struct
