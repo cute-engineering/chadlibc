@@ -4,13 +4,16 @@ AS		?= $(CC)
 AR		= ar
 RM		= rm -f
 
-CFLAGS	+= -Wall -Werror -Wextra -fpic -fno-builtin -fno-stack-protector -nostdlib \
-			 -nostdinc -Iinclude
+BASE_CFLAGS	+= -Wall -Werror -Wextra
+LIBC_CFLAGS = $(BASE_CFLAGS) -Iinclude -nostdlib -nostdinc -fno-stack-protector -fno-builtin -fpic
+SYSDEPS_CFLAGS += $(BASE_CFLAGS) -fno-stack-protector -fpic
+
 ifneq ($(CC), tcc)
-CFLAGS	+= -ansi -pedantic
+BASE_CFLAGS	+= -ansi -pedantic
 endif
 LDFLAGS	+= -nostdlib -shared
 ARFLAGS	= rcs
+
 
 SYSDEPS_PATH	= %(SYSDEPS_SRC)
 
@@ -38,10 +41,10 @@ crt0.o: sysdeps/$(SYSDEPS_PATH)/crt0.S
 	$(AS) -o $@ $^
 
 %.o: %.c
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) $(LIBC_CFLAGS) -c -o $@ $<
 
 sysdeps/$(SYSDEPS_PATH)/%.o: sysdeps/$(SYSDEPS_PATH)/%.c
-	$(CC) $(CFLAGS) $(SYSDEPS_CFLAGS) -c -o $@ $<
+	$(CC) $(SYSDEPS_CFLAGS) -c -o $@ $<
 
 include test/build.mk
 
