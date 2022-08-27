@@ -15,6 +15,6 @@ test: $(TEST_EXE)
 	@ ./test/testsuite.sh
 
 test/%.exe: test/%.c crt0.o $(LIB_STATIC)
-	$(CC) -o $@ $^ $(CFLAGS)
+	$(CC) -o $@ $^ $(LIBC_CFLAGS)
 
 .PHONY: test
