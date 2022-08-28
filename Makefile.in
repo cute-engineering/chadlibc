@@ -5,7 +5,7 @@ AR		= ar
 RM		= rm -f
 
 BASE_CFLAGS	+= -Wall -Werror -Wextra
-LIBC_CFLAGS = $(BASE_CFLAGS) -Iinclude -nostdlib -nostdinc -fno-stack-protector -fno-builtin -fpic
+LIBC_CFLAGS = $(BASE_CFLAGS) -Iinclude -nostdlib -nostdinc -fno-stack-protector -fno-builtin -fpic -Isysdeps/$(SYSDEPS_PATH)/include
 SYSDEPS_CFLAGS += $(BASE_CFLAGS) -fno-stack-protector -fpic
 
 ifneq ($(CC), tcc)
