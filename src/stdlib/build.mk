@@ -5,4 +5,6 @@ STDLIB_SRC	= abs.c \
 				rand.c \
 				exit.c \
 				getenv.c \
-				atexit.c
+				atexit.c \
+				strtod.c \
+				strtoul.c
