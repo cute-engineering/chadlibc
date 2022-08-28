@@ -29,7 +29,14 @@ int rand(void);
 void srand(unsigned int);
 
 void exit(int);
-char *getenv(const char *name);
-int atexit(void (*func)(void));
+char *getenv(const char *);
+int atexit(void (*)(void));
+
+double atof(const char *);
+int atoi(const char *);
+long int atol(const char *);
+double strtod(const char *, char **);
+long int strtol(const char *, char **, int);
+unsigned long int strtoul(const char *, char **, int);
 
 #endif /* !_STDLIB_H */
