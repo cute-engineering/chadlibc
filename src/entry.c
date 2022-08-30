@@ -1,3 +1,4 @@
+#include <signal.h>
 #include <stddef.h>
 #include <stdlib.h>
 
@@ -28,6 +29,11 @@ __chadlibc_entry(char *stack)
 	for (i = 0; i < ATEXIT_MAX; i++)
 	{
 		__chadlibc_atexit[i] = NULL;
+	}
+
+	for (i = 0; i < 7; i++)
+	{
+		signal(i, SIG_DFL);
 	}
 
 	parse_stack((unsigned long *)stack, &argc, &argv, &envp);

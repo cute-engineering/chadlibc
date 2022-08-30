@@ -11,7 +11,8 @@ TEST_SRCS	= test_ctype.c \
 				test_strspn.c \
 				test_getenv.c \
 				test_strtod.c \
-				test_strtoul.c
+				test_strtoul.c \
+				test_signal.c
 
 TEST_EXE	= $(addprefix test/, $(TEST_SRCS:.c=.exe))
 
