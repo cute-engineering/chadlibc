@@ -18,9 +18,7 @@ ignore_sig_handler(int sig)
 
 void (*signal(int sig, void (*func)(int)))(int)
 {
-	void (*old_func)(int);
-
-	__atomic_load(&signal_handlers[sig], &old_func, __ATOMIC_SEQ_CST);
+	void (*old_func)(int) = signal_handlers[sig];
 
 	if (sig > 6 || sig < 0)
 	{
@@ -30,17 +28,15 @@ void (*signal(int sig, void (*func)(int)))(int)
 
 	if (func == SIG_DFL)
 	{
-		__atomic_store_n(&signal_handlers[sig], default_sig_handler,
-						 __ATOMIC_RELEASE);
+		signal_handlers[sig] = default_sig_handler;
 	}
 	else if (func == SIG_IGN)
 	{
-		__atomic_store_n(&signal_handlers[sig], ignore_sig_handler,
-						 __ATOMIC_RELEASE);
+		signal_handlers[sig] = ignore_sig_handler;
 	}
 	else
 	{
-		__atomic_store_n(&signal_handlers[sig], func, __ATOMIC_RELEASE);
+		signal_handlers[sig] = func;
 	}
 
 	return old_func;
