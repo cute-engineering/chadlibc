@@ -19,12 +19,7 @@ __cxa_atexit(void (*func)(void *), void *arg, void *dso)
 
 	/* this is cursed and not portable */
 	__chadlibc_atexit[atexit_count] = (void (*)(void))func;
-	/* TODO: proper fix, using lib pthread? */
-#ifdef __TINYC__
-	atexit_count++;
-#else
 	__atomic_fetch_add(&atexit_count, 1, __ATOMIC_SEQ_CST);
-#endif
 
 	return 0;
 }

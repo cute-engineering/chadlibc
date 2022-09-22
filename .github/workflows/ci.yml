@@ -7,15 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        cc: [gcc, clang, tcc]
+        cc: [gcc, clang]
     steps:
     - uses: actions/checkout@v1
     - name: Install build dependencies
       run: |
         sudo apt-get update
         sudo apt-get install build-essential
-        sudo apt-get install clang tcc
-
+        sudo apt-get install clang
     - name: Build with ${{ matrix.cc }}
       run: |
         ./configure

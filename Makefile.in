@@ -4,13 +4,10 @@ AS		?= $(CC)
 AR		= ar
 RM		= rm -f
 
-BASE_CFLAGS	+= -Wall -Werror -Wextra
+BASE_CFLAGS	+= -Wall -Werror -Wextra -pedantic -std=c99 -Werror=vla
 LIBC_CFLAGS = $(BASE_CFLAGS) -Iinclude -nostdlib -nostdinc -fno-stack-protector -fno-builtin -fpic -Isysdeps/$(SYSDEPS_PATH)/include
 SYSDEPS_CFLAGS += $(BASE_CFLAGS) -fno-stack-protector -fpic
 
-ifneq ($(CC), tcc)
-BASE_CFLAGS	+= -ansi -pedantic
-endif
 LDFLAGS	+= -nostdlib -shared
 ARFLAGS	= rcs
 
