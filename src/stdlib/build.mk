@@ -7,4 +7,5 @@ STDLIB_SRC	= abs.c \
 				getenv.c \
 				atexit.c \
 				strtod.c \
-				strtoul.c
+				strtoul.c \
+				abort.c

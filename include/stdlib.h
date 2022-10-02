@@ -31,6 +31,7 @@ void srand(unsigned int);
 void exit(int);
 char *getenv(const char *);
 int atexit(void (*)(void));
+void abort(void);
 
 double atof(const char *);
 int atoi(const char *);
