@@ -1,1 +1,0 @@
-SIGNAL_SRC = signal.c
