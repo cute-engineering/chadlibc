@@ -3,7 +3,7 @@
 #include <string.h>
 
 int
-main()
+main(void)
 {
 	int result = 0;
 	result += getenv("hello") == NULL ? 0 : 1;

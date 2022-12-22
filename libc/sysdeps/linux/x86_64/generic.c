@@ -1,4 +1,5 @@
-#include <sys/syscall.h>
+/* XXX */
+#define SYS_exit 60
 
 static void
 syscall1(int nbr, unsigned long arg)

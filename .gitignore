@@ -52,3 +52,20 @@ Mkfile.old
 dkms.conf
 
 Makefile
+
+# Autoconf
+build-aux/compile
+build-aux/install-sh
+build-aux/missing
+build-aux/config.guess
+build-aux/config.sub
+build-aux/depcomp
+build-aux/ltmain.sh
+build-aux/test-driver
+configure
+aclocal.m4
+*.cache
+*~
+Makefile.in
+
+build/
