@@ -16,31 +16,16 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with ChadLibC. If not, see <https://www.gnu.org/licenses/>.
  */
-#ifndef _SIGNAL_H
-# define _SIGNAL_H 1
+#ifndef _FLOAT_H
+# define _FLOAT_H 1
 
 # ifdef __cplusplus
 extern "C" {
 # endif /* __cplusplus */
 
-typedef int sig_atomic_t;
-
-# define SIGABRT 0
-# define SIGFPE	1
-# define SIGILL	2
-# define SIGINT	3
-# define SIGSEGV 4
-# define SIGTERM 5
-
-# define SIG_IGN (void (*)(int))0
-# define SIG_DFL (void (*)(int))1
-# define SIG_ERR (void (*)(int))2
-
-void (*signal(int sig, void (*func)(int)))(int);
-int raise(int sig);
 
 # ifdef __cplusplus
 }
 # endif /* __cplusplus */
 
-#endif /* !_SIGNAL_H */
+#endif /* !_FLOAT_H */

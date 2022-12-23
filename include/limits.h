@@ -19,6 +19,10 @@
 #ifndef _LIMITS_H
 # define _LIMITS_H 1
 
+# ifdef __cplusplus
+extern "C" {
+# endif /* __cplusplus */
+
 # include <abi/limits.h>
 
 # define CHAR_BIT   8
@@ -37,5 +41,9 @@
 # define UINT_MAX   0xffffffffU
 # define ULONG_MAX  (2UL * LONG_MAX + 1)
 # define USHRT_MAX  0xffff
+
+# ifdef __cplusplus
+}
+# endif /* __cplusplus */
 
 #endif /* !_LIMITS_H */

@@ -19,6 +19,10 @@
 #ifndef _STDDEF_H
 # define _STDDEF_H 1
 
+# ifdef __cplusplus
+extern "C" {
+# endif /* __cplusplus */
+
 # define NULL ((void *)0)
 
 # ifdef __SIZE_TYPE__
@@ -32,5 +36,9 @@ typedef __PTRDIFF_TYPE__ ptrdiff_t;
 # else
 typedef long ptrdiff_t;
 # endif /* __PTRDIFF_TYPE__ */
+
+# ifdef __cplusplus
+}
+# endif /* __cplusplus */
 
 #endif /* !_STDDEF_H */

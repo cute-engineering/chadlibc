@@ -19,6 +19,10 @@
 #ifndef _STDLIB_H
 # define _STDLIB_H 1
 
+# ifdef __cplusplus
+extern "C" {
+# endif /* __cplusplus */
+
 # define EXIT_SUCCESS 0
 # define EXIT_FAILURE 1
 
@@ -57,5 +61,9 @@ long int atol(const char *);
 double strtod(const char *, char **);
 long int strtol(const char *, char **, int);
 unsigned long int strtoul(const char *, char **, int);
+
+# ifdef __cplusplus
+}
+# endif /* __cplusplus */
 
 #endif /* !_STDLIB_H */

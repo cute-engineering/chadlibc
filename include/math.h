@@ -19,11 +19,19 @@
 #ifndef _MATH_H
 # define _MATH_H 1
 
+# ifdef __cplusplus
+extern "C" {
+# endif /* __cplusplus */
+
 /* Power functions */
 double sqrt(double);
 double pow(double, double);
 
 /* Nearest integer, absolute value, and remainder functions */
 double floor(double);
+
+# ifdef __cplusplus
+}
+# endif /* __cplusplus */
 
 #endif /* !_MATH_H */
