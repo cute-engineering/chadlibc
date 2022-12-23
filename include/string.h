@@ -19,6 +19,10 @@
 #ifndef _STRING_H
 # define _STRING_H 1
 
+# ifdef __cplusplus
+extern "C" {
+# endif /* __cplusplus */
+
 # include <stddef.h>
 
 void *memcpy(void *, const void *, size_t);
@@ -38,5 +42,10 @@ size_t strcspn(const char *, const char *);
 
 size_t strlen(const char *);
 void *memset(void *, int, size_t);
+
+# ifdef __cplusplus
+}
+# endif /* __cplusplus */
+
 
 #endif /* !_STRING_H */

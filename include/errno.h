@@ -19,9 +19,17 @@
 #ifndef _ERRNO_H
 # define _ERRNO_H 1
 
+# ifdef __cplusplus
+extern "C" {
+# endif /* __cplusplus */
+
 # define EDOM   1
 # define ERANGE 2
 
 extern int errno;
+
+# ifdef __cplusplus
+}
+# endif /* __cplusplus */
 
 #endif /* !_ERRNO_H */
