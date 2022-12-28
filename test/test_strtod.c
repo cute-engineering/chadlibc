@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int
-main()
+main(void)
 {
 	int result = 0;
 

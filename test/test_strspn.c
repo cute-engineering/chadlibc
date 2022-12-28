@@ -1,6 +1,7 @@
 #include <string.h>
 
-int main(void)
+int
+main(void)
 {
     int result = 0;
 
