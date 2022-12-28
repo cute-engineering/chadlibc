@@ -1,10 +1,10 @@
-#include "limits.h"
+#include <limits.h>
 #include <errno.h>
 #include <stdlib.h>
 #include <string.h>
 
 int
-main()
+main(void)
 {
 	int res = 0;
 

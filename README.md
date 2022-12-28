@@ -10,3 +10,10 @@
 
 C standard library
 
+## License
+<a href="https://www.gnu.org/licenses/lgpl-3.0.en.html">
+  <img align="right" height="96" alt="LGPL3 License" src="https://www.gnu.org/graphics/lgplv3-with-text-154x68.png" />
+</a>
+ChadLibC is licensed under the <b>GNU Lesser General Public License v3.0 or later</b>.
+
+The full text of the license can be accessed via [this link](https://www.gnu.org/licenses/lgpl-3.0-standalone.html) and is also included in the [license](LICENSE) file of this software package.
