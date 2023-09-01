@@ -1,31 +1,52 @@
-/*
- * Copyright 2022 Cute Engineewing 
- *
- * This file is part of ChadLibC.
- *
- * ChadLibC is free software: you can redistribute it and/or modify it under
- * the terms of the GNU Lesser General Public License as published by the Free 
- * Software Foundation, either version 3 of the License, or (at your option)
- * any later version.
- *
- * ChadLibC is distributed in the hope that it will be useful, but WITHOUT ANY
- * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
- * FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more 
- * details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with ChadLibC. If not, see <https://www.gnu.org/licenses/>.
- */
 #ifndef _FLOAT_H
-# define _FLOAT_H 1
+#define _FLOAT_H
 
-# ifdef __cplusplus
+#ifdef __cplusplus
 extern "C" {
-# endif /* __cplusplus */
+#endif
 
+int __flt_rounds(void);
+#define FLT_ROUNDS (__flt_rounds())
 
-# ifdef __cplusplus
+#define FLT_RADIX 2
+
+#define FLT_TRUE_MIN 1.40129846432481707092e-45F
+#define FLT_MIN 1.17549435082228750797e-38F
+#define FLT_MAX 3.40282346638528859812e+38F
+#define FLT_EPSILON 1.1920928955078125e-07F
+
+#define FLT_MANT_DIG 24
+#define FLT_MIN_EXP (-125)
+#define FLT_MAX_EXP 128
+#define FLT_HAS_SUBNORM 1
+
+#define FLT_DIG 6
+#define FLT_DECIMAL_DIG 9
+#define FLT_MIN_10_EXP (-37)
+#define FLT_MAX_10_EXP 38
+
+#define DBL_TRUE_MIN 4.94065645841246544177e-324
+#define DBL_MIN 2.22507385850720138309e-308
+#define DBL_MAX 1.79769313486231570815e+308
+#define DBL_EPSILON 2.22044604925031308085e-16
+
+#define DBL_MANT_DIG 53
+#define DBL_MIN_EXP (-1021)
+#define DBL_MAX_EXP 1024
+#define DBL_HAS_SUBNORM 1
+
+#define DBL_DIG 15
+#define DBL_DECIMAL_DIG 17
+#define DBL_MIN_10_EXP (-307)
+#define DBL_MAX_10_EXP 308
+
+#define LDBL_HAS_SUBNORM 1
+#define LDBL_DECIMAL_DIG DECIMAL_DIG
+
+#include <bits/float.h>
+
+#ifdef __cplusplus
 }
-# endif /* __cplusplus */
+#endif
 
-#endif /* !_FLOAT_H */
+#endif

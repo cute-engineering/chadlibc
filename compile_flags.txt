@@ -6,6 +6,6 @@
 -nostdlib
 -nostdinc
 -Iinclude
--ansi
+-std=c99
 -pedantic
 -Isysdeps/linux/x86_64/include
