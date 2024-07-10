@@ -8,4 +8,7 @@
 -Iinclude
 -std=c99
 -pedantic
--Isysdeps/linux/x86_64/include
+-Ilibc/sysdeps/linux/x86_64/include
+-Ilibc/locale
+-D_LIBC
+-Ilibc

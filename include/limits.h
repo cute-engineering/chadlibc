@@ -50,6 +50,8 @@ extern "C" {
 #define LLONG_MAX  0x7fffffffffffffffLL
 #define ULLONG_MAX (2ULL*LLONG_MAX+1)
 
+#define NL_TEXTMAX	2048
+
 # ifdef __cplusplus
 }
 # endif /* __cplusplus */
